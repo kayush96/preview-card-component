@@ -1,0 +1,122 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white : hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --very-light-gray : hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+  --lexend: 'Lexend Deca', sans-serif;
+  --big-shoulder: 'Big Shoulders Display', cursive;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  background: var(--very-light-gray);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.card {
+  height: 440px;
+  width: 320px;
+  padding: 3rem 2rem 3rem 3rem;
+}
+.icon {
+  margin-bottom: 2rem;
+}
+.card > h1 {
+  font-family: var(--big-shoulder);
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: var(--very-light-gray);
+  margin-bottom: 2rem;
+}
+.card > p {
+  font-family: var(--lexend);
+  color: var(--transparent-white);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.orange {
+  background-color: var(--bright-orange);
+  border-radius: 8px 8px  0 0;
+}
+.cyan {
+  background-color: var(--dark-cyan);
+}
+.dark-cyan {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 8px 8px;
+}
+.txt-orange {
+  color: var(--bright-orange);
+  font-family: var(--lexend);
+  font-weight: 700;
+}
+.txt-cyan {
+  color: var(--dark-cyan);
+  font-family: var(--lexend);
+  font-weight: 700;
+}
+.txt-dark-cyan {
+  color:var(--very-dark-cyan);
+  font-family: var(--lexend);
+  font-weight: 700;
+}
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.btn:hover {
+  color: var(--very-light-gray);
+  background: none;
+  border: 3px solid var(--very-light-gray);
+}
+
+@media (min-width: 945px) and (max-width: 1440px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    height: 500px;
+    width: 305px;
+  }
+  .container {
+    flex-direction: row;
+    padding: 0;
+  }
+  .orange {
+    border-radius: 8px 0 0 8px;
+  }
+  .dark-cyan {
+    border-radius: 0 8px 8px 0;
+  }
+  .card > p {
+    margin-bottom: 4rem;
+  }
+}
